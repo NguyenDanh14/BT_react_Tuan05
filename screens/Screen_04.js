@@ -1,8 +1,9 @@
 import React, { useState } from 'react'; 
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Screen_03 from './Screen_03';
 
-const ProductScreen = () => {
+const Screen_04 = () => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [quantity, setQuantity] = useState(1);
     const price = 2.99;
@@ -335,4 +336,4 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
 });
-export default ProductScreen;
+export default Screen_04;

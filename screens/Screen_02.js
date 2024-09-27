@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, CheckBox, Image, ScrollView } from 'react-native';
+import Screen_03 from './Screen_03';
 
-const SignupScreen = ({navigation}) => {
+const Screen_02 = ({navigation}) => {
     const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -174,4 +175,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SignupScreen;
+export default Screen_02;

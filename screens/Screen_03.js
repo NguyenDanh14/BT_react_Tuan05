@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Screen_02 from './Screen_02';
 
-const WelcomeScreen = ({ navigation, route}) => {
+const Screen_03 = ({ navigation, route}) => {
     const { users } = route.params || {users: []};
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -166,4 +167,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default WelcomeScreen;
+export default Screen_03;
