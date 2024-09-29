@@ -37,13 +37,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     height: 40,
     width: 340,
-    backgroundColor: "green",
+    backgroundColor: '#00bdd6',
     color: "white",
     borderRadius: 10,
     textAlign: "center",
     padding: 5,
   },
   buttonText1: {
+    
     fontSize: 20,
     height: 40,
     width: 340,

@@ -4,7 +4,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Screen_03 from './Screen_03';
 
 const Screen_04 = () => {
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(1);
     const [quantity, setQuantity] = useState(1);
     const price = 2.99;
 
@@ -34,12 +34,15 @@ const Screen_04 = () => {
             <TouchableOpacity
                 key={item.id}
                 style={[styles.gridItem, isSelected && styles.selectedGridItem]}
-                onPress={() => handleItemPress(item.id)}
+                onPress={() => handleItemPress(item.id)} 
             >
                 <Image source={item.image} style={styles.gridItemImage}/>
             </TouchableOpacity>
         );
     };
+
+    // Lấy hình ảnh lớn dựa trên mục đã chọn    
+    const selectedImage = gridItems.find(item => item.id === selectedItem)?.image;
 
     const total = (price * quantity).toFixed(2);
     

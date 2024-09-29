@@ -4,21 +4,31 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Screen_02 from './Screen_02';
 
 const Screen_03 = ({ navigation, route}) => {
-    const { users } = route.params || {users: []};
+    const { users, email: emailFocused, password: passwordFocused } = route.params || { users: [] };
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isFocusedEmail, setIsFocusedEmail] = useState(false);
     const [isFocusedPassword, setIsFocusedPassword] = useState(false);
 
-    const handleLogin = () => {
+    const Login = () => {
+        // Kiểm tra xem email và password có được nhập đầy đủ không
+        if (!email.trim() || !password.trim()) {
+            Alert.alert('Thông tin không đầy đủ', 'Vui lòng nhập cả email và mật khẩu.');
+            return;
+        }
+    
+        // Tìm kiếm người dùng trong danh sách
         const userFound = users.find(user => user.email === email && user.password === password);
-        if(userFound){
+        
+        // Kiểm tra xem người dùng có tồn tại không
+        if (userFound) {
             alert(`Welcome, ${userFound.userName}!`);
             navigation.navigate('Screen_04');
         } else {
-            alert('Email hoặc password không hợp lệ');
+            Alert.alert('Đăng nhập không thành công', 'Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.'); // Thông báo nếu không tìm thấy người dùng
         }
     };
+    
 
     return (
         <View style={styles.container}>

@@ -12,16 +12,23 @@ const Screen_02 = ({navigation}) => {
     const [agreeTerms, setAgreeTerms] = useState(false);
     const [users, setUsers] = useState([]);
 
-    const handleSignup = () => {
-        if(userName && email && password && agreeTerms){
-            const newUser = {userName, email, password};
-            setUsers([...users,newUser]);
-            alert('Đăng ký thành công!');
-            navigation.navigate('Welcome',{users:[...users,newUser]});
-        } else{
-            alert('Vui lòng tích vào ô "I agree with Terms & Conditions"');
+    const Signup = () => {
+        if (userName && email && password && agreeTerms) {
+            const newUser = { userName, email, password };
+            // Cập nhật danh sách người dùng
+            const updatedUsers = [...users, newUser];
+            setUsers(updatedUsers);
+            // Chuyển đến Screen_03 và truyền thông tin người dùng
+            navigation.navigate('Screen_03', {
+                users: updatedUsers,
+                email: email, // Truyền email sang Screen_03
+                password: password // Truyền password sang Screen_03
+            });
+        } else {
+            alert('Vui lòng nhập đầy đủ thông tin vào');
         }
     };
+    
 
     return (
         <ScrollView style={styles.scrollView}>
@@ -84,7 +91,7 @@ const Screen_02 = ({navigation}) => {
                 </View>
 
                 {/* Continue Button */}
-                <TouchableOpacity style={styles.button} onPress={handleSignup}>
+                <TouchableOpacity style={styles.button} onPress={Signup}>
                     <Text style={styles.buttonText}>Continue</Text>
                 </TouchableOpacity>
             </View>
