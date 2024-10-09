@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, CheckBox, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
+import { CheckBox } from 'react-native-elements';
 import Screen_03 from './Screen_03';
 
 const Screen_02 = ({navigation}) => {
@@ -80,15 +81,13 @@ const Screen_02 = ({navigation}) => {
                 </View>
 
                 {/* Checkbox */}
-                <View style={styles.checkboxContainer}>
-                    <CheckBox
-                        value={agreeTerms}
-                        onValueChange={setAgreeTerms}
-                    />
-                    <Text style={styles.checkboxLabel}>
-                        I agree with <Text style={styles.link}>Terms & Conditions</Text>
-                    </Text>
-                </View>
+                <CheckBox
+                    title="I agree with Terms & Conditions"
+                    checked={agreeTerms}
+                    onPress={() => setAgreeTerms(!agreeTerms)}
+                    containerStyle={styles.checkboxContainer}
+                    textStyle={styles.checkboxLabel}
+                />
 
                 {/* Continue Button */}
                 <TouchableOpacity style={styles.button} onPress={Signup}>
