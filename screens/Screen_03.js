@@ -32,7 +32,7 @@ const Screen_03 = ({ navigation, route}) => {
 
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/DATA/Image 20.png')} style={styles.logo} />
+            <Image source={require('../assets/DATA/Image_20.png')} style={styles.logo} />
             <View style={styles.contentContainer}>
                 <Text style={styles.welcomeText}>Welcome!</Text>
 

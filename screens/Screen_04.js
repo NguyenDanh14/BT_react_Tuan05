@@ -9,11 +9,11 @@ const Screen_04 = () => {
     const price = 2.99;
 
     const gridItems = [
-        { id: 1, image: require('../assets/DATA/Container 7 (3).png') },
-        { id: 2, image: require('../assets/DATA/Image 7 (2).png')},
-        { id: 3, image: require('../assets/DATA/Image 7 (1).png')},
-        { id: 4, image: require('../assets/DATA/Image 7 (4).png')},
-        { id: 5, image: require('../assets/DATA/Image 7.png')},
+        { id: 1, image: require('../assets/DATA/Container_73.png') },
+        { id: 2, image: require('../assets/DATA/Image_72.png')},
+        { id: 3, image: require('../assets/DATA/Image_71.png')},
+        { id: 4, image: require('../assets/DATA/Image_74.png')},
+        { id: 5, image: require('../assets/DATA/Image_70.png')},
     ];
 
     const handleItemPress = (id) => {
@@ -69,7 +69,7 @@ const Screen_04 = () => {
                     <Text style = {styles.productSubtitle}>Occaecat est deserunt tempor offici</Text>
                     <View style = {styles.ratingContainer}>
                         <Image
-                            source={require('../assets/DATA/Rating 3.png')}
+                            source={require('../assets/DATA/Rating_3.png')}
                             style ={styles.starIcon}
                         />
                         <Text style={styles.ratingText}>4.5</Text>

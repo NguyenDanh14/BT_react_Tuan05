@@ -33,7 +33,7 @@ const Screen_02 = ({navigation}) => {
     return (
         <ScrollView style={styles.scrollView}>
             <View style={styles.container}>
-                <Image source={require('../assets/DATA/Image 19.png')} style={styles.image} />
+                <Image source={require('../assets/DATA/Image_19.png')} style={styles.image} />
                 <Text style={styles.title}>Nice to see you!</Text>
                 <Text style={styles.subtitle}>Create your account</Text>
 
