@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-export default function Screen_01({ navigation }) {
+const Screen_01 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.style1}>
@@ -63,3 +63,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+export default Screen_01;
